@@ -18,5 +18,6 @@ makedocs(
     repo = "<repository url>"
 )=#
 deploydocs(
-   repo = "github.com/rafaelchp/Documentacion-Julia.git"
+   repo = "github.com/rafaelchp/Documentacion-Julia.git", 
+   versions = ["stable" => "v^", "v#.#.#", devurl => devurl]
 )
