@@ -5,7 +5,8 @@ makedocs(
     sitename = "Documentación con Julia",
     format = Documenter.HTML(),
     pages = [
-        "Inicio" => "index.md"
+        "Inicio" => "index.md", 
+        "Partes" => "another.md"
     ]
     # modules = [DocumentationSite]
 )
