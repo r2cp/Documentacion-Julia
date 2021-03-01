@@ -41,14 +41,14 @@ x_{1,2} = \frac{-B \pm \sqrt{B^2 - 4 A C}}{2A}
 
 ```@repl
 using Statistics
-xs = collect(1:10)
+xs = rand(10)
 median(xs)
 sum(xs)
 ```
 
 ## Running interactive code
 
-[`@example` block](@ref) run a code snippet and insert the output into the document.
+`@example` run a code snippet and insert the output into the document.
 E.g. the following Markdown
 
 ````markdown
