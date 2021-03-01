@@ -6,7 +6,7 @@ makedocs(
     format = Documenter.HTML(),
     pages = [
         "Inicio" => "index.md", 
-        "Partes" => "another.md"
+        "Demostración" => "another.md"
     ]
     # modules = [DocumentationSite]
 )
@@ -18,6 +18,6 @@ makedocs(
     repo = "<repository url>"
 )=#
 deploydocs(
-   repo = "github.com/rafaelchp/Documentacion-Julia.git", 
-   versions = ["stable" => "v^", "v#.#.#"]
+   repo = "github.com/rafaelchp/Documentacion-Julia.git"#, 
+   #versions = ["stable" => "v^", "v#.#.#"]
 )
