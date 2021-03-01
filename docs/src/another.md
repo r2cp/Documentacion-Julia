@@ -12,6 +12,8 @@ end
 
 Footnote references can be added with the `[^label]` syntax.[^1] The footnote definitions get collected at the bottom of the page.
 
+[^1]: A footnote definition uses the `[^label]: ...` sytax in a block scope.
+
 For mathematics, both inline and display equations are available.
 Inline equations should be written as LaTeX between two backticks,
 e.g. ``` ``A x^2 + B x + C = 0`` ```.
@@ -42,4 +44,21 @@ using Statistics
 xs = collect(1:10)
 median(xs)
 sum(xs)
+```
+
+## Running interactive code
+
+[`@example` block](@ref) run a code snippet and insert the output into the document.
+E.g. the following Markdown
+
+````markdown
+```@example
+2 + 3
+```
+````
+
+becomes the following code-output block pair
+
+```@example
+2 + 3
 ```
