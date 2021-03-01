@@ -3,23 +3,23 @@
     @show x + 1
 end</code></pre><p>Footnote references can be added with the <code>[^label]</code> syntax.<sup class="footnote-reference"><a id="citeref-1" href="#footnote-1">[1]</a></sup> The footnote definitions get collected at the bottom of the page.</p><p>For mathematics, both inline and display equations are available. Inline equations should be written as LaTeX between two backticks, e.g. <code>``A x^2 + B x + C = 0``</code>. It will render as <span>$A x^2 + B x + C = 0$</span>.</p><p>The LaTeX for display equations must be wrapped in a <code>```math</code> code block and will render like</p><p class="math-container">\[x_{1,2} = \frac{-B \pm \sqrt{B^2 - 4 A C}}{2A}\]</p><div class="admonition is-info"><header class="admonition-header">&#39;note&#39; admonition</header><div class="admonition-body"><p>Admonitions look like this. This is a <code>!!! note</code>-type admonition.</p><p>Note that admonitions themselves can contain other block-level elements too, such as code blocks. E.g.</p><pre><code class="language-julia">f(x) = x^2</code></pre></div></div><div class="admonition is-success"><header class="admonition-header">&#39;tip&#39; admonition</header><div class="admonition-body"><p>This is a <code>!!! tip</code>-type admonition.</p></div></div><pre><code class="language-julia-repl">julia&gt; using Statistics
 
-julia&gt; xs = collect(1:10)
-10-element Vector{Int64}:
-  1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
- 10
+julia&gt; xs = rand(10)
+10-element Vector{Float64}:
+ 0.7254122164019479
+ 0.7504435612370499
+ 0.8458669260043081
+ 0.6140438914876596
+ 0.2478760648197107
+ 0.6395230043714162
+ 0.8235528402163523
+ 0.47446117056464665
+ 0.1516277678947382
+ 0.5785155447297992
 
 julia&gt; median(xs)
-5.5
+0.6267834479295379
 
 julia&gt; sum(xs)
-55</code></pre><h2 id="Running-interactive-code"><a class="docs-heading-anchor" href="#Running-interactive-code">Running interactive code</a><a id="Running-interactive-code-1"></a><a class="docs-heading-anchor-permalink" href="#Running-interactive-code" title="Permalink"></a></h2><p><a href="@ref"><code>@example</code> block</a> run a code snippet and insert the output into the document. E.g. the following Markdown</p><pre><code class="language-markdown">```@example
+5.851322987727629</code></pre><h2 id="Running-interactive-code"><a class="docs-heading-anchor" href="#Running-interactive-code">Running interactive code</a><a id="Running-interactive-code-1"></a><a class="docs-heading-anchor-permalink" href="#Running-interactive-code" title="Permalink"></a></h2><p><code>@example</code> run a code snippet and insert the output into the document. E.g. the following Markdown</p><pre><code class="language-markdown">```@example
 2 + 3
-```</code></pre><p>becomes the following code-output block pair</p><pre><code class="language-julia">2 + 3</code></pre><pre class="documenter-example-output">5</pre><section class="footnotes is-size-7"><ul><li class="footnote" id="footnote-1"><a class="tag is-link" href="#citeref-1">1</a>A footnote definition uses the <code>[^label]: ...</code> sytax in a block scope.</li></ul></section></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../">« Inicio</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Monday 1 March 2021 16:56">Monday 1 March 2021</span>. Using Julia version 1.6.0-rc1.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+```</code></pre><p>becomes the following code-output block pair</p><pre><code class="language-julia">2 + 3</code></pre><pre class="documenter-example-output">5</pre><section class="footnotes is-size-7"><ul><li class="footnote" id="footnote-1"><a class="tag is-link" href="#citeref-1">1</a>A footnote definition uses the <code>[^label]: ...</code> sytax in a block scope.</li></ul></section></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../">« Inicio</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Monday 1 March 2021 21:41">Monday 1 March 2021</span>. Using Julia version 1.6.0-rc1.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
