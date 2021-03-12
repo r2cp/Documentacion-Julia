@@ -43,7 +43,6 @@ jobs:
             run(`$(npm_cmd()) install highlight.js purgecss`);
             import PkgPage;
             PkgPage.optimize(input="page", output="");
-            # Build docs
             Pkg.activate("docs");
             Pkg.instantiate();
             include("docs/make.jl");'
