@@ -46,7 +46,7 @@ jobs:
             Pkg.activate("docs");
             Pkg.instantiate();
             include("docs/make.jl");'
-    - name: Build and Deploy
+    - name: Deploy page
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

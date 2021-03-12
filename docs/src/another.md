@@ -1,8 +1,9 @@
-# Otro apartado
+# Utilidades para documentación
 
-Algunos ejemplos de Markdown y código fuente.
+A continuación se presentan algunos ejemplos de Markdown y código fuente.
 
-When the language is specified for the block, e.g. by starting the block with ````` ```julia`````, the contents gets highlighted appropriately (for the language that are supported by the highlighter).
+## Código fuente
+Cuando se especifica el idioma para el bloque, p. Ej. al comenzar el bloque con ````` ```julia`````, el contenido se resalta adecuadamente (para el idioma que admite el resaltador).
 
 ```julia
 function foo(x::Integer)
@@ -10,33 +11,36 @@ function foo(x::Integer)
 end
 ```
 
-Footnote references can be added with the `[^label]` syntax.[^1] The footnote definitions get collected at the bottom of the page.
+## Notas al pie de página
+Las referencias a las notas al pie se pueden agregar con la sintaxis `[^ label]`. [^1] Las definiciones de las notas al pie se recopilan en la parte inferior de la página.
 
-[^1]: A footnote definition uses the `[^label]: ...` sytax in a block scope.
+[^1]: Una definición de nota al pie utiliza la sintaxis `[^label]: ...` en un alcance de bloque.
 
-For mathematics, both inline and display equations are available.
-Inline equations should be written as LaTeX between two backticks,
-e.g. ``` ``A x^2 + B x + C = 0`` ```.
-It will render as ``A x^2 + B x + C = 0``.
+## Ecuaciones
+Para matemáticas, están disponibles ecuaciones en línea y en pantalla.
+Las ecuaciones en línea deben escribirse como LaTeX entre dos comillas invertidas,
+p. ej. ``` ``A x^2 + B x + C = 0`` ```.
+Se representará como ``A x^2 + B x + C = 0``.
 
-The LaTeX for display equations must be wrapped in a ````` ```math ````` code block and will render like
+El LaTeX para las ecuaciones de visualización debe estar envuelto en un bloque de código ````` ```math ````` y se representará como
 
 ```math
 x_{1,2} = \frac{-B \pm \sqrt{B^2 - 4 A C}}{2A}
 ```
 
-!!! note "'note' admonition"
-    Admonitions look like this. This is a `!!! note`-type admonition.
+## Bloques de color
+!!! note "Advertencia"
+    Las amonestaciones se ven así. Esto es un `!!! note` amonestación tipo nota.
 
-    Note that admonitions themselves can contain other block-level elements too,
-    such as code blocks. E.g.
+    Tenga en cuenta que las advertencias en sí mismas también pueden contener otros elementos a nivel de bloque,
+    como bloques de código. Por ejemplo,
 
     ```julia
     f(x) = x^2
     ```
 
-!!! tip "'tip' admonition"
-    This is a `!!! tip`-type admonition.
+!!! tip "Tips"
+    Este es un bloque de `!!! tip`.
 
 
 ```@repl
@@ -46,10 +50,10 @@ median(xs)
 sum(xs)
 ```
 
-## Running interactive code
+## Ejecutando código interactivo
 
-`@example` run a code snippet and insert the output into the document.
-E.g. the following Markdown
+`@example` ejecuta un fragmento de código e inserta la salida en el documento.
+Por ejemplo, el siguiente código
 
 ````markdown
 ```@example
@@ -57,7 +61,7 @@ E.g. the following Markdown
 ```
 ````
 
-becomes the following code-output block pair
+se convierte en el siguiente par de bloques de código de salida
 
 ```@example
 2 + 3
