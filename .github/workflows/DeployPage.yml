@@ -31,6 +31,7 @@ jobs:
     # variable in `config.md` accordingly! so for instance
     # if you set here `folder="web"` change prepath for
     # `@def prepath = "YourPackage.jl/web"`
+    - name: Build site
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # For authentication with GitHub Actions token
         DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # For authentication with SSH deploy key
