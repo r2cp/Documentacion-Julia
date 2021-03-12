@@ -31,21 +31,20 @@ jobs:
     # variable in `config.md` accordingly! so for instance
     # if you set here `folder="web"` change prepath for
     # `@def prepath = "YourPackage.jl/web"`
-    - name: Build landpage
-      run: julia -e '
+    - name: Build landpage and docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # For authentication with GitHub Actions token
+          DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # For authentication with SSH deploy key
+        run: julia -e '
             using Pkg;
             Pkg.add(["NodeJS", "PkgPage", "DataFrames"]);
             using NodeJS;
             run(`$(npm_cmd()) install highlight.js purgecss`);
             import PkgPage;
-            PkgPage.optimize(input="page", output="web")'
-    - name: Install Documenter.jl dependencies
-        run: julia --project=docs/ -e 'using Pkg; Pkg.instantiate()'
-    - name: Build and deploy Documenter.jl 
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # For authentication with GitHub Actions token
-          DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # For authentication with SSH deploy key
-        run: julia --project=docs/ docs/make.jl
+            PkgPage.optimize(input="page", output="")
+            Pkg.activate("docs")
+            Pkg.instantiate()
+            include("docs/make.jl")'
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:

@@ -4,6 +4,7 @@ using Documenter
 makedocs(
     sitename = "Documentación con Julia",
     format = Documenter.HTML(),
+    build   = "page/__site",
     pages = [
         "Inicio" => "index.md", 
         "Demostración" => "another.md"
@@ -17,7 +18,7 @@ makedocs(
 #=deploydocs(
     repo = "<repository url>"
 )=#
-deploydocs(
-   repo = "github.com/rafaelchp/Documentacion-Julia.git"#, 
-   #versions = ["stable" => "v^", "v#.#.#"]
-)
+# deploydocs(
+#    repo = "github.com/rafaelchp/Documentacion-Julia.git"#, 
+#    #versions = ["stable" => "v^", "v#.#.#"]
+# )
