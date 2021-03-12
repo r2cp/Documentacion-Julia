@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+  tags: '*'
 jobs:
   build-and-deploy-page:
     runs-on: ubuntu-latest
@@ -40,6 +41,8 @@ jobs:
             Pkg.activate("docs");
             Pkg.instantiate();
             include("docs/make.jl");
+            mkdir("page/__site");
+            mv("docs/build", "page/__site", force=true);
             Pkg.activate();
             Pkg.add(["NodeJS", "PkgPage", "DataFrames"]);
             using NodeJS;
