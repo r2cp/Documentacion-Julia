@@ -31,11 +31,10 @@ jobs:
     # variable in `config.md` accordingly! so for instance
     # if you set here `folder="web"` change prepath for
     # `@def prepath = "YourPackage.jl/web"`
-    - name: Build landpage and docs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # For authentication with GitHub Actions token
-          DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # For authentication with SSH deploy key
-        run: julia -e '
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # For authentication with GitHub Actions token
+        DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # For authentication with SSH deploy key
+      run: julia -e '
             using Pkg;
             Pkg.add(["NodeJS", "PkgPage", "DataFrames"]);
             using NodeJS;
