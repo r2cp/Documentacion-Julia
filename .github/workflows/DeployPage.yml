@@ -38,15 +38,15 @@ jobs:
         DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # For authentication with SSH deploy key
       run: julia -e '
             using Pkg;
-            Pkg.activate("docs");
-            Pkg.instantiate();
-            include("docs/make.jl");
-            Pkg.activate();
             Pkg.add(["NodeJS", "PkgPage", "DataFrames"]);
             using NodeJS;
             run(`$(npm_cmd()) install highlight.js purgecss`);
             import PkgPage;
-            PkgPage.optimize(input="page", output="web");'
+            PkgPage.optimize(input="page", output="");
+            # Build docs
+            Pkg.activate("docs");
+            Pkg.instantiate();
+            include("docs/make.jl");'
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
