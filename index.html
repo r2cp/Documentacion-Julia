@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="R2">
+  <title>Documentación con Julia</title>
+
+  <link rel="icon" type="image/png"  href="/Documentacion-Julia/assets/favicon.ico">
+
+  <!-- CSS -->
+  
+   <link rel="stylesheet" href="/Documentacion-Julia/libs/highlight/styles/atom-one-dark.css">
+   
+  <link rel="stylesheet" href="/Documentacion-Julia/css/bootstrap.min.css">
+  <style>.bg-primary {
+  background-color: #3f6388 !important;
+}
+
+a {
+  color: #2669DD;
+}
+
+a:hover {
+  color: teal;
+}
+
+.section-bg-color {
+  background-color: #f6f8fa;
+}
+
+footer a {
+  color: cornflowerblue;
+}
+
+
+header {
+  margin-top: 55px !important;
+}
+
+
+
+.jumbotron {
+  background-image: url("assets/diagonal-lines.svg");
+  background-repeat: repeat;
+}
+
+
+/* CODE ADJUSTMENTS */
+
+pre code.hljs {
+  border-radius: 10px;
+}
+
+pre code.hljs.plaintext {
+  margin-left: 15px;
+}
+</style>
+  <link rel="stylesheet" href="/Documentacion-Julia/css/custom.css">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body id="page-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <div class="container">
+    <span class="navbar-brand">
+      
+        <img src="/Documentacion-Julia/assets/logo.svg" class="img-fluid" style="height:         25px;
+padding-right:  10px;
+" alt="Logo"/>
+      
+      <a href="#page-top">Documentación con Julia</a>
+      
+    </span>
+    <input type="checkbox" id="navbar-toggler-cbox" class="d-none" />
+    <label for="navbar-toggler-cbox" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#acerca">Acerca</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#iniciando">Iniciando</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <header class="text-white text-center">
+  
+    <div class="jumbotron jumbotron-fluid container-fluid bg-primary">
+  
+    <h1>Documentación con Julia</h1>
+    <div class="lead">Página de documentación de ejemplo con PkgPage.jl
+</div>
+    
+      <a class="github-button" href="https://github.com/rafaelchp/Documentacion-Julia" data-size="large" aria-label="View Documentación con Julia on GitHub">View on GitHub</a>
+    
+    
+      <a class="github-button" href="https://github.com/rafaelchp/Documentacion-Julia" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star Documentación con Julia on GitHub">Star</a>
+    
+  </div>
+</header>
+
+  <!-- Content appended here -->
+<div class="franklin-content"><section id="acerca" class="scrollspy">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h2>Acerca de este sitio</h2></p>
+<div class="lead">Esta es una página de prueba para documentar proyectos o paquetes utilizando construida con <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.</div>
+<p>PkgPage utiliza <a href="https://getbootstrap.com/docs/4.5/getting-started/introduction/">Bootstrap 4.5</a> y es particularmente fácil de utilizar y realizar ajustes mínimos en HTML o CSS para obtener resultados atractivos.</p>
+<p>Es posible:</p>
+<ul>
+<li><p>insertar figuras y tablas estilizadas, </p>
+</li>
+<li><p>utilizar ambientes de multicolumna, </p>
+</li>
+<li><p>controlar la disposición, los colores, el código del tema, y más desde el archivo de configuración <code>config.md</code>. </p>
+</li>
+<li><p>Inserción automática de secciones en la barra de navegación, </p>
+</li>
+<li><p>purgado automático de bootstrap css para eliminar las reglas no utilizadas, </p>
+</li>
+<li><p>el resto de genialidades de <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>:</p>
+<ul>
+<li><p>actualización en vivo,</p>
+</li>
+<li><p>soporte para <a href="https://github.com/KaTeX/KaTeX">KaTeX</a> y <a href="https://highlightjs.org/">highlight.js</a> y rendereziado preautomático,</p>
+</li>
+<li><p>y <a href="https://franklinjl.org/">mucho más</a>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>      </div>
+    </div>
+  </div>
+</section>
+<section id="iniciando" class="scrollspy section-bg-color">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h2>Iniciando</h2></p>
+<p>Para iniciar, solamente se debe agregar el paquete &#40;con <strong>Julia ≥ 1.3</strong>&#41; y</p>
+<pre><code class="julia-repl hljs"><span class="hljs-meta">julia&gt;</span><span class="julia"> <span class="hljs-keyword">using</span> PkgPage
+</span><span class="hljs-meta">julia&gt;</span><span class="julia"> newpage()
+</span><span class="hljs-meta">julia&gt;</span><span class="julia"> serve()</span></code></pre>
+<br/>
+<p>La llamada a <code>newpage</code> efectuará: </p>
+<ul>
+<li><p>la generación de un directorio <code>page/</code> en el directorio actual, que contiene todos los materiales para generar el sitio,</p>
+<ul>
+<li><p>se puede modificar <code>page/config.md</code> para cambiar la descripción, disposición, colores, etc.</p>
+</li>
+<li><p>se puede modificar <code>page/index.md</code> para cambiar el contenido</p>
+</li>
+</ul>
+</li>
+<li><p>generará un archivo <code>.github/workflows/DeployPage.yml</code> para habilitar la accióni de Github que hará el despliegue del sitio. </p>
+</li>
+</ul>
+<p>La llamada a <code>serve</code> permitirá renderizar la página y hacerla disponible para visualización en forma local en el explorador web cuando se hacen modificaciones a <code>config.md</code> o <code>index.md</code>.</p>
+<div class="alert alert-info" role="alert">
+Es posible especificar otro directorio como argumento en la función <code>newpage&#40;path&#61;&quot;page2&quot;&#41;</code> pero este debe ser cambiado también en el archivo <code>DeployPage.yml</code> para realizar el despliegue.</div>
+<p>      </div>
+    </div>
+  </div>
+</section>
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">&copy; R2. Website powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>, <a href="https://github.com/tlienart/PkgPage.jl">PkgPage.jl</a> and the <a href="https://julialang.org">Julia</a> programming language.</p>
+  </div>
+</footer>
+</div><!-- CONTENT ENDS HERE -->
+  
+  
+      
+
+
+  
+  <script src="/Documentacion-Julia/libs/simple-scrollspy.min.js"></script>
+  <script>
+  window.onload = function () {
+    scrollSpy('#navbarResponsive', {
+      sectionClass: '.scrollspy',
+      menuActiveTarget: '.nav-link',
+      offset: 100
+    })
+  }
+  </script>
+  </body>
+</html>
